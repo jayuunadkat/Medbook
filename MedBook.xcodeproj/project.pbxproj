@@ -54,6 +54,7 @@
 		647B7BC22B66E29300C29B57 /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B7BC12B66E29300C29B57 /* NavigationUtil.swift */; };
 		647B7BC42B66E3AE00C29B57 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B7BC32B66E3AE00C29B57 /* SplashView.swift */; };
 		647B7BC72B66E5F500C29B57 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B7BC62B66E5F500C29B57 /* ViewRouter.swift */; };
+		64AAF41C2B674DB900C07ABC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AAF41B2B674DB900C07ABC /* AppDelegate.swift */; };
 		64DC75692B6581FA0089BB0A /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC75682B6581FA0089BB0A /* AlertModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		647B7BC12B66E29300C29B57 /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
 		647B7BC32B66E3AE00C29B57 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		647B7BC62B66E5F500C29B57 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		64AAF41B2B674DB900C07ABC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64DC75682B6581FA0089BB0A /* AlertModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
 		903062C7B607864B00409BC9 /* Pods-MedBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedBook.release.xcconfig"; path = "Target Support Files/Pods-MedBook/Pods-MedBook.release.xcconfig"; sourceTree = "<group>"; };
 		9AC8B3596E8434EF4DEB145A /* Pods-MedBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedBook.debug.xcconfig"; path = "Target Support Files/Pods-MedBook/Pods-MedBook.debug.xcconfig"; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				64247EFE2B62DCB400C88EA3 /* MedBookApp.swift */,
+				64AAF41B2B674DB900C07ABC /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				64247F8E2B62E7B100C88EA3 /* Extension+Fonts.swift in Sources */,
 				64247F7D2B62E74000C88EA3 /* CommonSearchField.swift in Sources */,
 				64247F7F2B62E74000C88EA3 /* SwipeActionModifier.swift in Sources */,
+				64AAF41C2B674DB900C07ABC /* AppDelegate.swift in Sources */,
 				647B7BBC2B66D3E000C29B57 /* UserModel.xcdatamodeld in Sources */,
 				64247EFF2B62DCB400C88EA3 /* MedBookApp.swift in Sources */,
 				64247F922B62E7B100C88EA3 /* ApplyBorder+Shadow.swift in Sources */,

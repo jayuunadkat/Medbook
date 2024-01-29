@@ -11,6 +11,8 @@
 		<string>Jost-Thin.ttf</string>
 		<string>Jost-Light.ttf</string>
 	</array>
+    <key>UIUserInterfaceStyle</key>
+    <string>Light</string>
     <key>NSAppTransportSecurity</key>
     <dict>
         <key>NSAllowsArbitraryLoads</key>

@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct MedBookApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject var userDataController: UserDataController = UserDataController()
     @State private var alert: AlertData = AlertData.empty
     @State private var showAlert: Bool = false
