@@ -12,84 +12,78 @@ struct AuthView: View {
     @Environment(\.managedObjectContext) var userMOC
     @FetchRequest(sortDescriptors: []) var users: FetchedResults<User>
     @FetchRequest(sortDescriptors: []) var countryData: FetchedResults<Country>
+    @EnvironmentObject var viewRouter: ViewRouter
     
     @StateObject var authVM: AuthViewModel =  AuthViewModel(authType: .Login)
     @Environment(\.dismiss) private var dismiss
     
-    @State var moveToHome: Bool = false
-
     var body: some View {
-        NavigationStack {
-            ZStack {
-                AppBackgroundColor()
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 0) {
-                        HeaderView()
-                        TextFieldView()
-                        if authVM.authType == .SignUp {
-                            ValidationCheckBoxView()
-                            CountrySelectionView()
-                        }
-                        Spacer()
-                        ButtonCell(
-                            title: authVM.authType == .SignUp ? Constant.AppString.kLetsGo : Constant.AppString.kLogin,
-                            isActive: $authVM.isLoginEnabled
-                        ) {
-                            if authVM.isLoginEnabled {
-                                authVM.btnActionTapped(userMOC: userMOC) {
-                                    moveToHome = true
-                                }
+        ZStack {
+            AppBackgroundColor()
+            ScrollView {
+                VStack(alignment: .leading, spacing: 0) {
+                    HeaderView()
+                    TextFieldView()
+                    if authVM.authType == .SignUp {
+                        ValidationCheckBoxView()
+                        CountrySelectionView()
+                    }
+                    Spacer()
+                    ButtonCell(
+                        title: authVM.authType == .SignUp ? Constant.AppString.kLetsGo : Constant.AppString.kLogin,
+                        isActive: $authVM.isLoginEnabled
+                    ) {
+                        if authVM.isLoginEnabled {
+                            authVM.btnActionTapped(userMOC: userMOC) {
+                                viewRouter.isLoggedIn = true
                             }
                         }
                     }
-                    .frame(minHeight: ScreenSize.SCREEN_HEIGHT - 110)
-                    .onAppear {
-                        self.authVM.allUsers = self.users.map { element in
-                            AuthViewModel.UserModel(
-                                id: element.id ?? UUID(),
-                                email: element.email ?? "",
-                                password: element.password ?? ""
+                }
+                .frame(minHeight: ScreenSize.SCREEN_HEIGHT - 110)
+                .onAppear {
+                    self.authVM.allUsers = self.users.map { element in
+                        AuthViewModel.UserModel(
+                            id: element.id ?? UUID(),
+                            email: element.email ?? "",
+                            password: element.password ?? ""
+                        )
+                    }
+                    if self.authVM.authType == .SignUp {
+                        
+                        authVM.countryData = self.countryData.map({
+                            element in
+                            CountryData(
+                                country: element.country ?? "",
+                                region: element.region ?? "",
+                                countryCode: element.countryCode ?? ""
                             )
-                        }
-                        if self.authVM.authType == .SignUp {
-
-                                authVM.countryData = self.countryData.map({
-                                    element in
-                                    CountryData(
-                                        country: element.country ?? "",
-                                        region: element.region ?? "",
-                                        countryCode: element.countryCode ?? ""
-                                    )
-                                })
-
-                                authVM.getCountriesData(userMOC: userMOC) {}
-
-                        }
-                    }
-                }
-                .scrollIndicators(.hidden)
-            }
-            .navigationDestination(isPresented: $moveToHome, destination: {
-                HomeView()
-            })
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    CommonBackButton {
-
-                        dismiss()
+                        })
+                        
+                        authVM.getCountriesData(userMOC: userMOC) {}
+                        
                     }
                 }
             }
-            .navigationBarBackButtonHidden()
-            .onChange(of: self.authVM.txtEmail.text) { _,_ in
-                self.authVM.validateEmail()
+            .scrollIndicators(.hidden)
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                CommonBackButton {
+                    
+                    dismiss()
+                }
             }
-            .onChange(of: self.authVM.txtPassword.text) { _,_ in
-                self.authVM.validatePassword()
-            }
-            .onAppear {
-                self.scrollBounces(false)
-            }
+        }
+        .navigationBarBackButtonHidden()
+        .onChange(of: self.authVM.txtEmail.text) { _,_ in
+            self.authVM.validateEmail()
+        }
+        .onChange(of: self.authVM.txtPassword.text) { _,_ in
+            self.authVM.validatePassword()
+        }
+        .onAppear {
+            self.scrollBounces(false)
         }
     }
 }
@@ -115,7 +109,7 @@ extension AuthView {
             CommonText(
                 title: "\(Constant.AppString.kWelcome)\(authVM.authType == .Login ? "," : "")",
                 fontSize: Constant.FontSize._28FontSize,
-                    fontStyle: .Bold,
+                fontStyle: .Bold,
                 foregroundColor: .AppGrayColor
             )
             CommonText(
@@ -160,9 +154,9 @@ extension AuthView {
         }
         .padding(.horizontal, Constant.setSpace._18Padding)
         .padding(.top, Constant.setSpace._30Padding * 1.3)
-
+        
     }
-
+    
     ///`CheckBoxCellView`
     func CheckBoxCell(checkBoxCell: Binding<AuthViewModel.ValidationModel>) -> some View {
         HStack(spacing: Constant.setSpace._20Padding) {

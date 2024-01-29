@@ -43,7 +43,7 @@ struct CommonSecureField: View {
                     }
                 }
                 .autocorrectionDisabled()
-
+                .textInputAutocapitalization(.never)
                     .AddPlaceholder(when: nameOfField.isEmpty) {
                         Text(placeholderText)
                             .foregroundColor(Color.AppGrayTextColor)

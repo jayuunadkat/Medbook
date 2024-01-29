@@ -50,14 +50,11 @@ struct HomeView: View {
                     )
                 })
             }
-            .onChange(of: self.homeVM.txtSearch) { _,_ in
+            .onChange(of: self.homeVM.txtDebouncedSearch) { _,_ in
                 self.homeVM.savedBooks = homeVM.savedBooks
                 self.homeVM.getBooks()
             }
             .ignoresSafeArea(edges: .bottom)
-            .onChange(of: homeVM.sortType) { _,_ in
-                homeVM.applySorting()
-            }
         }
     }
 }
@@ -164,8 +161,12 @@ extension HomeView {
                         index: 10
                     )
                     .applyBorder(cornerRadius: Constant.setSpace._12Padding)
-                    .swipeActions(iconLast: "bookmark") { event in
-                        homeVM.saveBook(by: element.title ?? "", userMOC: userMOC)
+                    .swipeActions(iconLast: self.homeVM.savedBookTitles.contains(element.title ?? "") ? "bookmark.fill" : "bookmark") { event in
+                        if self.homeVM.savedBookTitles.contains(element.title ?? "") {
+                            homeVM.deleteBook(by: element.title ?? "", userMOC: userMOC, bookMarks: userBookMarked)
+                        } else {
+                            homeVM.saveBook(by: element.title ?? "", userMOC: userMOC)
+                        }
                     }
                     .onAppear {
                         homeVM.paginateBooks(index: i)
@@ -203,7 +204,9 @@ extension HomeView {
     func FilterCell(sortCase: SortBy) -> some View {
         Button {
             withAnimation {
-                homeVM.sortType = sortCase
+                if !self.homeVM.arrBooks.isEmpty {
+                    homeVM.sortType = sortCase
+                }
             }
         } label: {
             CommonText(

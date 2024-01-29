@@ -47,7 +47,6 @@ struct BookData: Codable, Hashable, Equatable {
 ///`GetCountries`
 extension BooksModel {
     static func getBooks(params: [String:Any], completion: @escaping ((_ booksModel: BooksModel?) -> ())) {
-        Indicator.show()
         if var url = URL(string: "https://openlibrary.org/search.json") {
             
             for (key, value) in params {
@@ -56,7 +55,6 @@ extension BooksModel {
 
 
             APIManager.makeRequest(with: url.absoluteString, method: .get, parameter: params) { response in
-                Indicator.hide()
                 guard let json = response as? [String: Any] else { return }
                 guard let data = try? JSONSerialization.data(withJSONObject: json) else { return }
 

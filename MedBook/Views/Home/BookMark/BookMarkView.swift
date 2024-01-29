@@ -35,6 +35,7 @@ struct BookMarkView: View {
             .padding(.all, Constant.setSpace._16Padding)
             .padding(.top, Constant.setSpace._16Padding)
         }
+        .scrollIndicators(.hidden)
         .onAppear {
             self.bookMarkVM.bookMarks =
                 self.userBookMarked.map { book in

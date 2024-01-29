@@ -114,7 +114,7 @@ extension AuthViewModel {
         withAnimation {
             self.arrPasswordValidations[1].isValidated = self.txtPassword.text.filter({$0.isUppercase}).count > 0
             self.arrPasswordValidations[2].isValidated = self.txtPassword.text.hasSpecialCharacter()
-            self.arrPasswordValidations[0].isValidated = self.txtPassword.text.count > 8
+            self.arrPasswordValidations[0].isValidated = self.txtPassword.text.count >= 8
             
             self.txtPassword.isValidated = arrPasswordValidations[1].isValidated &&
             arrPasswordValidations[2].isValidated &&

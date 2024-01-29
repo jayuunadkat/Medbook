@@ -40,22 +40,25 @@ extension HomeViewModel {
 ///`getBooks`
 extension HomeViewModel {
     func getBooks(isPagination: Bool = false) {
-        guard txtSearch.count > 3 else { return }
+        guard txtSearch.count > 3 else {
+            self.arrBooks = txtSearch.isEmpty ? [] : self.arrBooks
+            return
+        }
         let params: [String : Any] = [
             "title" : txtSearch,
             "limit" : 10,
             "offset" : isPagination ? arrBooks.count : 0
         ]
+        if !isPagination {Indicator.show()}
         BooksModel.getBooks(params: params) { [weak self] booksModel in
+            Indicator.hide()
             guard let self = self else { return }
-            var filteredBookData: [BookData] = []
             self.showAnimation = true
                 if isPagination {
-                    filteredBookData = booksModel?.books?.filter({self.savedBookTitles.contains($0.title ?? "") == false}) ?? []
                     self.arrBooks.append(contentsOf: booksModel?.books ?? [])
                 } else {
-                    filteredBookData = booksModel?.books?.filter({self.savedBookTitles.contains($0.title ?? "") == false}) ?? []
-                    self.arrBooks = filteredBookData
+
+                    self.arrBooks = booksModel?.books ?? []
                 }
         }
     }
@@ -87,13 +90,15 @@ extension HomeViewModel {
             try? userMOC.save()
 
             savedBooks.append(contentsOf: arrBooks.filter({$0.title ?? "" == title}))
-            self.arrBooks.removeAll(where: {$0.title ?? "" == title})
         }
     }
-}
 
-extension HomeViewModel {
-    func applySorting() {
-        
+    ///`deleteBook`
+    func deleteBook(by title: String, userMOC: NSManagedObjectContext, bookMarks: FetchedResults<UserBooks>) {
+        self.savedBooks.removeAll(where: {$0.title ?? "" == title})
+        if let object = bookMarks.first(where: {$0.title ?? "" == title }) {
+            userMOC.delete(object)
+            try? userMOC.save()
+        }
     }
 }
