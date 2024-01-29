@@ -31,8 +31,13 @@ The app does the following:
 - **Framework:** MVVM
 
 ## Screenshots
-<img src="https://github.com/jayuunadkat/Medbook/assets/110239958/dc7376d9-af19-4c4f-ae8a-ff3e9d1cfe52" width="200" height ="432" />
-<img src="https://github.com/jayuunadkat/Medbook/assets/110239958/84e90170-aec7-42b2-bce4-a2244a628a97" width="200" height ="432" />
-<img src="https://github.com/jayuunadkat/Medbook/assets/110239958/37de7da7-a3c4-4864-b174-c206e8b744c4" width="200" height ="432" />
-<img src="https://github.com/jayuunadkat/Medbook/assets/110239958/1f98de91-ab0d-415c-ae33-8dee816a0862" width="200" height ="432" />
 <img src="https://github.com/jayuunadkat/Medbook/assets/110239958/a8378898-42e8-4211-bcba-6901f5dafbd9" width="200" height ="432" />
+<img src="https://github.com/jayuunadkat/Medbook/assets/110239958/1f98de91-ab0d-415c-ae33-8dee816a0862" width="200" height ="432" />
+<img src="https://github.com/jayuunadkat/Medbook/assets/110239958/37de7da7-a3c4-4864-b174-c206e8b744c4" width="200" height ="432" />
+<br/>
+<img src="https://github.com/jayuunadkat/Medbook/assets/110239958/84e90170-aec7-42b2-bce4-a2244a628a97" width="200" height ="432" />
+<img src="https://github.com/jayuunadkat/Medbook/assets/110239958/dc7376d9-af19-4c4f-ae8a-ff3e9d1cfe52" width="200" height ="432" />
+
+
+
+
