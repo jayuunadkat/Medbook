@@ -1,0 +1,848 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3405797D31FD7FE58C99AEAA /* Pods_MedBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55FB496BF4C726A8B605B612 /* Pods_MedBook.framework */; };
+		6403A8412B657FC8008D4EA5 /* Extensions+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6403A8402B657FC8008D4EA5 /* Extensions+Data.swift */; };
+		6403A8432B658013008D4EA5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6403A8422B658013008D4EA5 /* Logger.swift */; };
+		6413CB3B2B651E3000F63CFA /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6413CB3A2B651E3000F63CFA /* AuthView.swift */; };
+		6413CB3F2B65268200F63CFA /* CommonBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6413CB3E2B65268200F63CFA /* CommonBackButton.swift */; };
+		6413CB412B652C5C00F63CFA /* CommonTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6413CB402B652C5C00F63CFA /* CommonTextField.swift */; };
+		6413CB452B65367A00F63CFA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6413CB442B65367A00F63CFA /* SignUpViewModel.swift */; };
+		6413CB482B65433400F63CFA /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6413CB472B65433400F63CFA /* CountryModel.swift */; };
+		6413CB4B2B657D2900F63CFA /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6413CB4A2B657D2900F63CFA /* ApiManager.swift */; };
+		64247EFF2B62DCB400C88EA3 /* MedBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247EFE2B62DCB400C88EA3 /* MedBookApp.swift */; };
+		64247F032B62DCB500C88EA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64247F022B62DCB500C88EA3 /* Assets.xcassets */; };
+		64247F062B62DCB500C88EA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64247F052B62DCB500C88EA3 /* Preview Assets.xcassets */; };
+		64247F202B62E34D00C88EA3 /* Jost-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64247F0E2B62E34D00C88EA3 /* Jost-Bold.ttf */; };
+		64247F252B62E34D00C88EA3 /* Jost-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64247F132B62E34D00C88EA3 /* Jost-Thin.ttf */; };
+		64247F292B62E34D00C88EA3 /* Jost-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64247F172B62E34D00C88EA3 /* Jost-Medium.ttf */; };
+		64247F2A2B62E34D00C88EA3 /* Jost-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64247F182B62E34D00C88EA3 /* Jost-Regular.ttf */; };
+		64247F2C2B62E34D00C88EA3 /* Jost-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64247F1A2B62E34D00C88EA3 /* Jost-Light.ttf */; };
+		64247F2F2B62E34D00C88EA3 /* Jost-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64247F1D2B62E34D00C88EA3 /* Jost-SemiBold.ttf */; };
+		64247F362B62E5BD00C88EA3 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F352B62E5BD00C88EA3 /* BaseView.swift */; };
+		64247F3A2B62E6F700C88EA3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F382B62E6F700C88EA3 /* Constants.swift */; };
+		64247F3B2B62E6F700C88EA3 /* ConstantExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F392B62E6F700C88EA3 /* ConstantExtension.swift */; };
+		64247F6B2B62E74000C88EA3 /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F432B62E74000C88EA3 /* CommonButton.swift */; };
+		64247F6E2B62E74000C88EA3 /* CommonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F462B62E74000C88EA3 /* CommonText.swift */; };
+		64247F732B62E74000C88EA3 /* CommonSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F4F2B62E74000C88EA3 /* CommonSecureField.swift */; };
+		64247F7D2B62E74000C88EA3 /* CommonSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F622B62E74000C88EA3 /* CommonSearchField.swift */; };
+		64247F7F2B62E74000C88EA3 /* SwipeActionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F662B62E74000C88EA3 /* SwipeActionModifier.swift */; };
+		64247F8B2B62E7B100C88EA3 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F812B62E7B000C88EA3 /* UIDevice+Extensions.swift */; };
+		64247F8C2B62E7B100C88EA3 /* String+Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F822B62E7B000C88EA3 /* String+Validations.swift */; };
+		64247F8D2B62E7B100C88EA3 /* Extensions+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F832B62E7B000C88EA3 /* Extensions+View.swift */; };
+		64247F8E2B62E7B100C88EA3 /* Extension+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F842B62E7B000C88EA3 /* Extension+Fonts.swift */; };
+		64247F8F2B62E7B100C88EA3 /* UserDefaultExt+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F852B62E7B000C88EA3 /* UserDefaultExt+Notification.swift */; };
+		64247F902B62E7B100C88EA3 /* ApplyGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F872B62E7B000C88EA3 /* ApplyGradient.swift */; };
+		64247F912B62E7B100C88EA3 /* ViewModifiers+ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F882B62E7B000C88EA3 /* ViewModifiers+ViewExtensions.swift */; };
+		64247F922B62E7B100C88EA3 /* ApplyBorder+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F892B62E7B000C88EA3 /* ApplyBorder+Shadow.swift */; };
+		64247F952B62E8BE00C88EA3 /* CornerRadiusModfier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64247F942B62E8BE00C88EA3 /* CornerRadiusModfier.swift */; };
+		6435ACA12B66FD3A00E04FB4 /* BookMarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435ACA02B66FD3A00E04FB4 /* BookMarkViewModel.swift */; };
+		6435ACA52B66FD9F00E04FB4 /* BookMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435ACA42B66FD9F00E04FB4 /* BookMarkView.swift */; };
+		647B7BAA2B6639FF00C29B57 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B7BA92B6639FF00C29B57 /* ActivityIndicatorView.swift */; };
+		647B7BB12B66928300C29B57 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B7BB02B66928300C29B57 /* HomeView.swift */; };
+		647B7BB42B6698C200C29B57 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B7BB32B6698C200C29B57 /* HomeViewModel.swift */; };
+		647B7BB62B66991D00C29B57 /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B7BB52B66991D00C29B57 /* BooksModel.swift */; };
+		647B7BB92B669EBC00C29B57 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B7BB82B669EBC00C29B57 /* BookCell.swift */; };
+		647B7BBC2B66D3E000C29B57 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 647B7BBA2B66D3E000C29B57 /* UserModel.xcdatamodeld */; };
+		647B7BC02B66D56700C29B57 /* UserDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B7BBF2B66D56700C29B57 /* UserDataController.swift */; };
+		647B7BC22B66E29300C29B57 /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B7BC12B66E29300C29B57 /* NavigationUtil.swift */; };
+		647B7BC42B66E3AE00C29B57 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B7BC32B66E3AE00C29B57 /* SplashView.swift */; };
+		647B7BC72B66E5F500C29B57 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B7BC62B66E5F500C29B57 /* ViewRouter.swift */; };
+		64DC75692B6581FA0089BB0A /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC75682B6581FA0089BB0A /* AlertModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		55FB496BF4C726A8B605B612 /* Pods_MedBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6403A8402B657FC8008D4EA5 /* Extensions+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Data.swift"; sourceTree = "<group>"; };
+		6403A8422B658013008D4EA5 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		6413CB3A2B651E3000F63CFA /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		6413CB3E2B65268200F63CFA /* CommonBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonBackButton.swift; sourceTree = "<group>"; };
+		6413CB402B652C5C00F63CFA /* CommonTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTextField.swift; sourceTree = "<group>"; };
+		6413CB442B65367A00F63CFA /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		6413CB472B65433400F63CFA /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		6413CB4A2B657D2900F63CFA /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		64247EFB2B62DCB400C88EA3 /* MedBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64247EFE2B62DCB400C88EA3 /* MedBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedBookApp.swift; sourceTree = "<group>"; };
+		64247F022B62DCB500C88EA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		64247F052B62DCB500C88EA3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		64247F0E2B62E34D00C88EA3 /* Jost-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Bold.ttf"; sourceTree = "<group>"; };
+		64247F132B62E34D00C88EA3 /* Jost-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Thin.ttf"; sourceTree = "<group>"; };
+		64247F172B62E34D00C88EA3 /* Jost-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Medium.ttf"; sourceTree = "<group>"; };
+		64247F182B62E34D00C88EA3 /* Jost-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Regular.ttf"; sourceTree = "<group>"; };
+		64247F1A2B62E34D00C88EA3 /* Jost-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Light.ttf"; sourceTree = "<group>"; };
+		64247F1D2B62E34D00C88EA3 /* Jost-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-SemiBold.ttf"; sourceTree = "<group>"; };
+		64247F342B62E56900C88EA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64247F352B62E5BD00C88EA3 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		64247F382B62E6F700C88EA3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		64247F392B62E6F700C88EA3 /* ConstantExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantExtension.swift; sourceTree = "<group>"; };
+		64247F432B62E74000C88EA3 /* CommonButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
+		64247F462B62E74000C88EA3 /* CommonText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonText.swift; sourceTree = "<group>"; };
+		64247F4F2B62E74000C88EA3 /* CommonSecureField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonSecureField.swift; sourceTree = "<group>"; };
+		64247F622B62E74000C88EA3 /* CommonSearchField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonSearchField.swift; sourceTree = "<group>"; };
+		64247F662B62E74000C88EA3 /* SwipeActionModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeActionModifier.swift; sourceTree = "<group>"; };
+		64247F812B62E7B000C88EA3 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
+		64247F822B62E7B000C88EA3 /* String+Validations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Validations.swift"; sourceTree = "<group>"; };
+		64247F832B62E7B000C88EA3 /* Extensions+View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+View.swift"; sourceTree = "<group>"; };
+		64247F842B62E7B000C88EA3 /* Extension+Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Fonts.swift"; sourceTree = "<group>"; };
+		64247F852B62E7B000C88EA3 /* UserDefaultExt+Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaultExt+Notification.swift"; sourceTree = "<group>"; };
+		64247F872B62E7B000C88EA3 /* ApplyGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyGradient.swift; sourceTree = "<group>"; };
+		64247F882B62E7B000C88EA3 /* ViewModifiers+ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewModifiers+ViewExtensions.swift"; sourceTree = "<group>"; };
+		64247F892B62E7B000C88EA3 /* ApplyBorder+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ApplyBorder+Shadow.swift"; sourceTree = "<group>"; };
+		64247F942B62E8BE00C88EA3 /* CornerRadiusModfier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadiusModfier.swift; sourceTree = "<group>"; };
+		6435ACA02B66FD3A00E04FB4 /* BookMarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkViewModel.swift; sourceTree = "<group>"; };
+		6435ACA42B66FD9F00E04FB4 /* BookMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkView.swift; sourceTree = "<group>"; };
+		647B7BA92B6639FF00C29B57 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		647B7BB02B66928300C29B57 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		647B7BB32B6698C200C29B57 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		647B7BB52B66991D00C29B57 /* BooksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
+		647B7BB82B669EBC00C29B57 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		647B7BBB2B66D3E000C29B57 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
+		647B7BBF2B66D56700C29B57 /* UserDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataController.swift; sourceTree = "<group>"; };
+		647B7BC12B66E29300C29B57 /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
+		647B7BC32B66E3AE00C29B57 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		647B7BC62B66E5F500C29B57 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		64DC75682B6581FA0089BB0A /* AlertModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
+		903062C7B607864B00409BC9 /* Pods-MedBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedBook.release.xcconfig"; path = "Target Support Files/Pods-MedBook/Pods-MedBook.release.xcconfig"; sourceTree = "<group>"; };
+		9AC8B3596E8434EF4DEB145A /* Pods-MedBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedBook.debug.xcconfig"; path = "Target Support Files/Pods-MedBook/Pods-MedBook.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64247EF82B62DCB400C88EA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3405797D31FD7FE58C99AEAA /* Pods_MedBook.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6413CB3C2B65212E00F63CFA /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				64247F352B62E5BD00C88EA3 /* BaseView.swift */,
+				647B7BC32B66E3AE00C29B57 /* SplashView.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		6413CB3D2B65213E00F63CFA /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				6413CB3A2B651E3000F63CFA /* AuthView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		6413CB422B65366100F63CFA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6413CB432B65366C00F63CFA /* Auth */,
+				647B7BB22B6698B200C29B57 /* Home */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6413CB432B65366C00F63CFA /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				6413CB442B65367A00F63CFA /* SignUpViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		6413CB462B65431900F63CFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				647B7BB52B66991D00C29B57 /* BooksModel.swift */,
+				6413CB472B65433400F63CFA /* CountryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6413CB492B657D2000F63CFA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6413CB4A2B657D2900F63CFA /* ApiManager.swift */,
+				6403A8422B658013008D4EA5 /* Logger.swift */,
+				64DC75682B6581FA0089BB0A /* AlertModel.swift */,
+				647B7BC12B66E29300C29B57 /* NavigationUtil.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		64247EF22B62DCB400C88EA3 = {
+			isa = PBXGroup;
+			children = (
+				64247EFD2B62DCB400C88EA3 /* MedBook */,
+				64247EFC2B62DCB400C88EA3 /* Products */,
+				681FE4AF6F8901E24832E2C1 /* Pods */,
+				C762FE5B5D0C4455C45EA34D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		64247EFC2B62DCB400C88EA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64247EFB2B62DCB400C88EA3 /* MedBook.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64247EFD2B62DCB400C88EA3 /* MedBook */ = {
+			isa = PBXGroup;
+			children = (
+				647B7BBD2B66D54900C29B57 /* LocalStorage */,
+				64247F322B62E38900C88EA3 /* App */,
+				64247F372B62E6F700C88EA3 /* Constants */,
+				64247F3C2B62E74000C88EA3 /* Common */,
+				64247F802B62E7B000C88EA3 /* Extensions */,
+				6413CB492B657D2000F63CFA /* Utilities */,
+				6413CB462B65431900F63CFA /* Model */,
+				6413CB422B65366100F63CFA /* ViewModel */,
+				64247F332B62E53D00C88EA3 /* Views */,
+				64247F312B62E35200C88EA3 /* Resources */,
+				64247F042B62DCB500C88EA3 /* Preview Content */,
+			);
+			path = MedBook;
+			sourceTree = "<group>";
+		};
+		64247F042B62DCB500C88EA3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				64247F052B62DCB500C88EA3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		64247F0C2B62E34D00C88EA3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				64247F0E2B62E34D00C88EA3 /* Jost-Bold.ttf */,
+				64247F132B62E34D00C88EA3 /* Jost-Thin.ttf */,
+				64247F172B62E34D00C88EA3 /* Jost-Medium.ttf */,
+				64247F182B62E34D00C88EA3 /* Jost-Regular.ttf */,
+				64247F1A2B62E34D00C88EA3 /* Jost-Light.ttf */,
+				64247F1D2B62E34D00C88EA3 /* Jost-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		64247F312B62E35200C88EA3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				64247F342B62E56900C88EA3 /* Info.plist */,
+				64247F022B62DCB500C88EA3 /* Assets.xcassets */,
+				64247F0C2B62E34D00C88EA3 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		64247F322B62E38900C88EA3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				64247EFE2B62DCB400C88EA3 /* MedBookApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		64247F332B62E53D00C88EA3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				647B7BC52B66E5EB00C29B57 /* ViewRouter */,
+				6413CB3C2B65212E00F63CFA /* Landing */,
+				647B7BB72B669EB300C29B57 /* BookCell */,
+				6413CB3D2B65213E00F63CFA /* Auth */,
+				647B7BAF2B66927500C29B57 /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		64247F372B62E6F700C88EA3 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				64247F382B62E6F700C88EA3 /* Constants.swift */,
+				64247F392B62E6F700C88EA3 /* ConstantExtension.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		64247F3C2B62E74000C88EA3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				64247F422B62E74000C88EA3 /* Buttons */,
+				64247F4D2B62E74000C88EA3 /* TextField */,
+				64247F612B62E74000C88EA3 /* CommonSearchField */,
+				64247F652B62E74000C88EA3 /* SwipeActions */,
+				647B7BA82B6639FF00C29B57 /* ActivityIndicator */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		64247F422B62E74000C88EA3 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				6413CB3E2B65268200F63CFA /* CommonBackButton.swift */,
+				64247F432B62E74000C88EA3 /* CommonButton.swift */,
+				64247F462B62E74000C88EA3 /* CommonText.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		64247F4D2B62E74000C88EA3 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				64247F4F2B62E74000C88EA3 /* CommonSecureField.swift */,
+				6413CB402B652C5C00F63CFA /* CommonTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		64247F612B62E74000C88EA3 /* CommonSearchField */ = {
+			isa = PBXGroup;
+			children = (
+				64247F622B62E74000C88EA3 /* CommonSearchField.swift */,
+			);
+			path = CommonSearchField;
+			sourceTree = "<group>";
+		};
+		64247F652B62E74000C88EA3 /* SwipeActions */ = {
+			isa = PBXGroup;
+			children = (
+				64247F662B62E74000C88EA3 /* SwipeActionModifier.swift */,
+			);
+			path = SwipeActions;
+			sourceTree = "<group>";
+		};
+		64247F802B62E7B000C88EA3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				64247F812B62E7B000C88EA3 /* UIDevice+Extensions.swift */,
+				64247F822B62E7B000C88EA3 /* String+Validations.swift */,
+				64247F832B62E7B000C88EA3 /* Extensions+View.swift */,
+				64247F842B62E7B000C88EA3 /* Extension+Fonts.swift */,
+				64247F852B62E7B000C88EA3 /* UserDefaultExt+Notification.swift */,
+				64247F862B62E7B000C88EA3 /* ViewModifiers */,
+				6403A8402B657FC8008D4EA5 /* Extensions+Data.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		64247F862B62E7B000C88EA3 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				64247F872B62E7B000C88EA3 /* ApplyGradient.swift */,
+				64247F882B62E7B000C88EA3 /* ViewModifiers+ViewExtensions.swift */,
+				64247F892B62E7B000C88EA3 /* ApplyBorder+Shadow.swift */,
+				64247F942B62E8BE00C88EA3 /* CornerRadiusModfier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		6435AC9E2B66FD1D00E04FB4 /* BookMark */ = {
+			isa = PBXGroup;
+			children = (
+				6435ACA02B66FD3A00E04FB4 /* BookMarkViewModel.swift */,
+			);
+			path = BookMark;
+			sourceTree = "<group>";
+		};
+		6435AC9F2B66FD2500E04FB4 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				647B7BB32B6698C200C29B57 /* HomeViewModel.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		6435ACA22B66FD8700E04FB4 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				647B7BB02B66928300C29B57 /* HomeView.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		6435ACA32B66FD8D00E04FB4 /* BookMark */ = {
+			isa = PBXGroup;
+			children = (
+				6435ACA42B66FD9F00E04FB4 /* BookMarkView.swift */,
+			);
+			path = BookMark;
+			sourceTree = "<group>";
+		};
+		647B7BA82B6639FF00C29B57 /* ActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				647B7BA92B6639FF00C29B57 /* ActivityIndicatorView.swift */,
+			);
+			path = ActivityIndicator;
+			sourceTree = "<group>";
+		};
+		647B7BAF2B66927500C29B57 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6435ACA32B66FD8D00E04FB4 /* BookMark */,
+				6435ACA22B66FD8700E04FB4 /* HomeScreen */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		647B7BB22B6698B200C29B57 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6435AC9F2B66FD2500E04FB4 /* HomeScreen */,
+				6435AC9E2B66FD1D00E04FB4 /* BookMark */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		647B7BB72B669EB300C29B57 /* BookCell */ = {
+			isa = PBXGroup;
+			children = (
+				647B7BB82B669EBC00C29B57 /* BookCell.swift */,
+			);
+			path = BookCell;
+			sourceTree = "<group>";
+		};
+		647B7BBD2B66D54900C29B57 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				647B7BC82B66E80900C29B57 /* DatabaseModels */,
+				647B7BBE2B66D55600C29B57 /* Controllers */,
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		647B7BBE2B66D55600C29B57 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				647B7BBF2B66D56700C29B57 /* UserDataController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		647B7BC52B66E5EB00C29B57 /* ViewRouter */ = {
+			isa = PBXGroup;
+			children = (
+				647B7BC62B66E5F500C29B57 /* ViewRouter.swift */,
+			);
+			path = ViewRouter;
+			sourceTree = "<group>";
+		};
+		647B7BC82B66E80900C29B57 /* DatabaseModels */ = {
+			isa = PBXGroup;
+			children = (
+				647B7BBA2B66D3E000C29B57 /* UserModel.xcdatamodeld */,
+			);
+			path = DatabaseModels;
+			sourceTree = "<group>";
+		};
+		681FE4AF6F8901E24832E2C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9AC8B3596E8434EF4DEB145A /* Pods-MedBook.debug.xcconfig */,
+				903062C7B607864B00409BC9 /* Pods-MedBook.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C762FE5B5D0C4455C45EA34D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55FB496BF4C726A8B605B612 /* Pods_MedBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		64247EFA2B62DCB400C88EA3 /* MedBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64247F092B62DCB500C88EA3 /* Build configuration list for PBXNativeTarget "MedBook" */;
+			buildPhases = (
+				3C7BB23B30D8C5AB04CDF17E /* [CP] Check Pods Manifest.lock */,
+				64247EF72B62DCB400C88EA3 /* Sources */,
+				64247EF82B62DCB400C88EA3 /* Frameworks */,
+				64247EF92B62DCB400C88EA3 /* Resources */,
+				56648D79A8022F99E33AB34E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MedBook;
+			productName = MedBook;
+			productReference = 64247EFB2B62DCB400C88EA3 /* MedBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64247EF32B62DCB400C88EA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					64247EFA2B62DCB400C88EA3 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 64247EF62B62DCB400C88EA3 /* Build configuration list for PBXProject "MedBook" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 64247EF22B62DCB400C88EA3;
+			productRefGroup = 64247EFC2B62DCB400C88EA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64247EFA2B62DCB400C88EA3 /* MedBook */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64247EF92B62DCB400C88EA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64247F292B62E34D00C88EA3 /* Jost-Medium.ttf in Resources */,
+				64247F2F2B62E34D00C88EA3 /* Jost-SemiBold.ttf in Resources */,
+				64247F2A2B62E34D00C88EA3 /* Jost-Regular.ttf in Resources */,
+				64247F252B62E34D00C88EA3 /* Jost-Thin.ttf in Resources */,
+				64247F062B62DCB500C88EA3 /* Preview Assets.xcassets in Resources */,
+				64247F032B62DCB500C88EA3 /* Assets.xcassets in Resources */,
+				64247F202B62E34D00C88EA3 /* Jost-Bold.ttf in Resources */,
+				64247F2C2B62E34D00C88EA3 /* Jost-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C7BB23B30D8C5AB04CDF17E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56648D79A8022F99E33AB34E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MedBook/Pods-MedBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MedBook/Pods-MedBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MedBook/Pods-MedBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64247EF72B62DCB400C88EA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6403A8412B657FC8008D4EA5 /* Extensions+Data.swift in Sources */,
+				64247F6B2B62E74000C88EA3 /* CommonButton.swift in Sources */,
+				6413CB482B65433400F63CFA /* CountryModel.swift in Sources */,
+				64247F8D2B62E7B100C88EA3 /* Extensions+View.swift in Sources */,
+				647B7BB62B66991D00C29B57 /* BooksModel.swift in Sources */,
+				64247F8E2B62E7B100C88EA3 /* Extension+Fonts.swift in Sources */,
+				64247F7D2B62E74000C88EA3 /* CommonSearchField.swift in Sources */,
+				64247F7F2B62E74000C88EA3 /* SwipeActionModifier.swift in Sources */,
+				647B7BBC2B66D3E000C29B57 /* UserModel.xcdatamodeld in Sources */,
+				64247EFF2B62DCB400C88EA3 /* MedBookApp.swift in Sources */,
+				64247F922B62E7B100C88EA3 /* ApplyBorder+Shadow.swift in Sources */,
+				6403A8432B658013008D4EA5 /* Logger.swift in Sources */,
+				64247F8B2B62E7B100C88EA3 /* UIDevice+Extensions.swift in Sources */,
+				64247F8C2B62E7B100C88EA3 /* String+Validations.swift in Sources */,
+				647B7BB12B66928300C29B57 /* HomeView.swift in Sources */,
+				647B7BB42B6698C200C29B57 /* HomeViewModel.swift in Sources */,
+				6435ACA52B66FD9F00E04FB4 /* BookMarkView.swift in Sources */,
+				6413CB412B652C5C00F63CFA /* CommonTextField.swift in Sources */,
+				647B7BC42B66E3AE00C29B57 /* SplashView.swift in Sources */,
+				6413CB3F2B65268200F63CFA /* CommonBackButton.swift in Sources */,
+				64247F902B62E7B100C88EA3 /* ApplyGradient.swift in Sources */,
+				64247F3B2B62E6F700C88EA3 /* ConstantExtension.swift in Sources */,
+				64DC75692B6581FA0089BB0A /* AlertModel.swift in Sources */,
+				647B7BB92B669EBC00C29B57 /* BookCell.swift in Sources */,
+				647B7BC22B66E29300C29B57 /* NavigationUtil.swift in Sources */,
+				647B7BC02B66D56700C29B57 /* UserDataController.swift in Sources */,
+				64247F952B62E8BE00C88EA3 /* CornerRadiusModfier.swift in Sources */,
+				64247F8F2B62E7B100C88EA3 /* UserDefaultExt+Notification.swift in Sources */,
+				6413CB4B2B657D2900F63CFA /* ApiManager.swift in Sources */,
+				64247F362B62E5BD00C88EA3 /* BaseView.swift in Sources */,
+				64247F6E2B62E74000C88EA3 /* CommonText.swift in Sources */,
+				6413CB3B2B651E3000F63CFA /* AuthView.swift in Sources */,
+				64247F912B62E7B100C88EA3 /* ViewModifiers+ViewExtensions.swift in Sources */,
+				6435ACA12B66FD3A00E04FB4 /* BookMarkViewModel.swift in Sources */,
+				64247F732B62E74000C88EA3 /* CommonSecureField.swift in Sources */,
+				6413CB452B65367A00F63CFA /* SignUpViewModel.swift in Sources */,
+				647B7BC72B66E5F500C29B57 /* ViewRouter.swift in Sources */,
+				64247F3A2B62E6F700C88EA3 /* Constants.swift in Sources */,
+				647B7BAA2B6639FF00C29B57 /* ActivityIndicatorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		64247F072B62DCB500C88EA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		64247F082B62DCB500C88EA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64247F0A2B62DCB500C88EA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AC8B3596E8434EF4DEB145A /* Pods-MedBook.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MedBook/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MedBook/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.testing.MedBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		64247F0B2B62DCB500C88EA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 903062C7B607864B00409BC9 /* Pods-MedBook.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MedBook/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MedBook/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.testing.MedBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64247EF62B62DCB400C88EA3 /* Build configuration list for PBXProject "MedBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64247F072B62DCB500C88EA3 /* Debug */,
+				64247F082B62DCB500C88EA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64247F092B62DCB500C88EA3 /* Build configuration list for PBXNativeTarget "MedBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64247F0A2B62DCB500C88EA3 /* Debug */,
+				64247F0B2B62DCB500C88EA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		647B7BBA2B66D3E000C29B57 /* UserModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				647B7BBB2B66D3E000C29B57 /* UserModel.xcdatamodel */,
+			);
+			currentVersion = 647B7BBB2B66D3E000C29B57 /* UserModel.xcdatamodel */;
+			path = UserModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 64247EF32B62DCB400C88EA3 /* Project object */;
+}
