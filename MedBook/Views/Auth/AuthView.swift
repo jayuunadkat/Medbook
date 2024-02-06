@@ -26,7 +26,9 @@ struct AuthView: View {
                     TextFieldView()
                     if authVM.authType == .SignUp {
                         ValidationCheckBoxView()
-                        CountrySelectionView()
+                        if !viewRouter.isLoggedIn {
+                            CountrySelectionView()
+                        }
                     }
                     Spacer()
                     ButtonCell(
